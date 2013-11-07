@@ -9,3 +9,6 @@ bubble-shadow.png
 
 The JS file contains some instructions in the form of notes. For more details, please visit:
 http://developer4you.net/bubble_up/bubble_up.html
+
+Or visit the wiki:
+https://github.com/BTutt/bubble_up/wiki
