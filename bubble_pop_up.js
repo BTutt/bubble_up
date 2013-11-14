@@ -1,5 +1,7 @@
 /* JavaScript Document
  POP_UP! V1.0
+ 
+ The MIT License (MIT)
  Copyright (c) 2013 B. Tuttle, Developer 4 You, developer4you.net 
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
