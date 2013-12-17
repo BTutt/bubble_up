@@ -1,7 +1,5 @@
 /* JavaScript Document
- POP_UP! V1.0
- 
- The MIT License (MIT)
+ POP_UP! V1.01
  Copyright (c) 2013 B. Tuttle, Developer 4 You, developer4you.net 
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,6 +58,7 @@ function showBubble(event, head, text){
  var bubbleBcolor = "#FFF"; // Sets the bubble background color. Default "#FFF"
  var bubbleTcolor = "black"; // Sets the color of the text. Default "black"
  var imgURL = "url(images/bubble-shadow.png)"; // url to image file in releation to html document
+ var closeimgURL ="images/close.png"; // url to image file in releation to html document
  var newLeft = event.pageX + 20;  // Sets the bubble popup location based on mouse location.
  
   /**********************************************************************************/
@@ -101,11 +100,27 @@ function showBubble(event, head, text){
  header.style.textAlign = "center";
  header.style.backgroundColor = headerBcolor;
  header.style.color = headerTcolor;
+ header.style.cssFloat = "left";
+ header.style.width = "88%";
  header.innerHTML = head;
+ 
+ var closer = document.createElement("img");
+ closer.src = closeimgURL;
+ closer.style.position = "relative";
+ closer.style.width = "20px";
+ closer.style.height = "20px";
+ closer.style.top = "-15px";
+ closer.style.right = "-15px";
+ closer.style.zIndex = "9999";
+ closer.style.cssFloat = "right";
+ closer.setAttribute("onClick","hideBubble()");
+ 
  
  shadowdiv.appendChild(textdiv);
  textdiv.appendChild(header);
+ header.appendChild(closer); 
  textdiv.appendChild(info);
+ 
  document.body.parentNode.appendChild(shadowdiv);
 }
 // on mouseout destroys bubble
